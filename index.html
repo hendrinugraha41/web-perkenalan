@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Perkenalan — Nama Anda</title>
+  <meta name="description" content="Perkenalan singkat: biodata, pengalaman mengajar, karya, dan kontak. Cocok untuk guru atau siswa yang ingin menunjukkan portofolio pendidikan." />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <aside class="sidebar">
+      <img src="assets/avatar.jpg" alt="Foto Nama Anda" class="avatar">
+      <h1 class="name">Nama Anda</h1>
+      <p class="role">Guru / Pengajar • Mapel: [contoh]</p>
+      <ul class="contact">
+        <li>Email: <a href="mailto:nama@email.com">nama@email.com</a></li>
+        <li>Lokasi: Kota, Negara</li>
+        <li>Telepon: +62 8xx-xxxx-xxxx</li>
+      </ul>
+      <nav class="sidebar-nav">
+        <a href="#about">Tentang</a>
+        <a href="#experience">Pengalaman</a>
+        <a href="#works">Karya</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <section id="about" class="card">
+        <h2>Tentang Saya</h2>
+        <p>Saya seorang guru yang berfokus pada peningkatan kompetensi digital siswa melalui pembelajaran berbasis proyek. Berpengalaman mengembangkan modul pembelajaran dan pelatihan coding untuk siswa dan rekan sejawat.</p>
+      </section>
+
+      <section id="experience" class="card">
+        <h2>Pengalaman Mengajar</h2>
+        <ul>
+          <li>2022–sekarang: Guru TIK — SMP X</li>
+          <li>2020–2022: Pelatih Literasi Digital untuk Guru</li>
+        </ul>
+      </section>
+
+      <section id="works" class="card">
+        <h2>Karya & Proyek</h2>
+        <div class="grid">
+          <article class="work">
+            <h3>Modul Pembelajaran: Algoritma Dasar</h3>
+            <p>Modul interaktif untuk kelas 7 yang mengenalkan konsep pemrograman logis.</p>
+          </article>
+          <article class="work">
+            <h3>Website Sekolah</h3>
+            <p>Template statis untuk profil sekolah dan portal pengumuman sederhana.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="card">
+        <h2>Kontak</h2>
+        <form id="contactForm">
+          <label for="name">Nama</label>
+          <input id="name" type="text" required>
+          <label for="email">Email</label>
+          <input id="email" type="email" required>
+          <label for="message">Pesan</label>
+          <textarea id="message" rows="5" required></textarea>
+          <button type="submit" class="btn">Kirim</button>
+          <p id="feedback" class="feedback"></p>
+        </form>
+      </section>
+
+      <footer class="footer">© <span id="year"></span> Nama Anda — Guru • Pembelajar</footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.getElementById('feedback').textContent = 'Terima kasih — pesan terkirim (demo).';
+      form.reset();
+    });
+  </script>
+</body>
+</html>
